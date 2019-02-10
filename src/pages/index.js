@@ -1,21 +1,30 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
+import { all } from 'src/data/metadata.js';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from 'src/components/layout';
+import SEO from 'src/components/seo';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <h1>Hello</h1>
+    <p>
+      Here I build a set of small useful APIs so you can use in your project
+      without suffering all the difficulties setting up stuff.
+    </p>
+    <p>All free for hobby projects. Contact me if you need more.</p>
+    <hr />
+    {all.map(app => (
+      <>
+        <Link to={`/${app.key}`}>
+          <h2>{app.name}</h2>
+        </Link>
+        <p>{app.description}</p>
+        <hr />
+      </>
+    ))}
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
