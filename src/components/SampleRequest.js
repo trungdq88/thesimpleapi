@@ -28,12 +28,17 @@ export default function SampleRequest({ actions, defaultParams }) {
 
   async function send() {
     setLoading(true);
-    const response = await fetch(buildUrl(item.urlPattern, params)).then(r =>
-      r.json(),
-    );
-    // `https://sheet.thesimpleapi.com/${sheetId}`,
-    setResponse(response);
-    setLoading(false);
+    try {
+      const response = await fetch(buildUrl(item.urlPattern, params)).then(r =>
+        r.json(),
+      );
+      setResponse(response);
+    } catch (e) {
+      console.error(e);
+      setResponse('Failed! Please check console log.');
+    } finally {
+      setLoading(false);
+    }
   }
 
   function parseActions(actions) {
