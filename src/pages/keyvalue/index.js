@@ -93,6 +93,10 @@ export default function Sheet() {
         <h2>4. Limitations</h2>
         <ul>
           <li>
+            Speed is not a feature, each request will likely to take about 300ms
+            up to 3 seconds for the response to be returned.
+          </li>
+          <li>
             You have free 1000 requests for each <code>:secret</code>. Check{' '}
             <code>X-KeyValue-Limit</code> in response headers to see your
             remaining requests. Contact me if you need more.
