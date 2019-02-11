@@ -1,21 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import apis from 'src/data/metadata.js';
-import styled from 'styled-components';
 import sheetLogo from './sheet.png';
-import sheetIdLocation from './sheetId.png';
+import sheetIdLocation from 'src/images/sheetId.png';
 import invite from './invite.png';
+import { serviceAccountEmail } from 'src/data/googleApi.js';
 
+import ImgBox from 'src/components/ImgBox.js';
 import Layout from 'src/components/layout';
 import SEO from 'src/components/seo';
 import SampleRequest from 'src/components/SampleRequest';
 
 const trim = _ => `${_}`.trim();
-
-const ImgBox = styled.img`
-  border-radius: 20px;
-  box-shadow: 0 11px 15px 1px rgba(0, 0, 0, 0.5);
-  margin: 20px 0;
-`;
 
 const SampleLink = () => (
   <a
@@ -121,7 +116,7 @@ export default function Sheet() {
         <h2>4. Private spreadsheets</h2>
         In order to fetch from private spreadsheets, you have to grant{' '}
         <b>View</b> permission to this email address:
-        <pre>sheet-bot@thesimpleapi.iam.gserviceaccount.com</pre>
+        <pre>{serviceAccountEmail}</pre>
         <ImgBox src={invite} alt="Invite" />
         <p>
           Now go{' '}

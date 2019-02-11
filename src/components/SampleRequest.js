@@ -32,6 +32,7 @@ export default function SampleRequest({ actions, defaultParams, defaultBody }) {
     try {
       const response = await fetch(buildUrl(item.urlPattern, params), {
         method: item.method,
+        headers: item.headers,
         body: body,
       }).then(r => r.json());
       setResponse(response);
@@ -54,7 +55,7 @@ export default function SampleRequest({ actions, defaultParams, defaultBody }) {
 
   function parseUrlPattern(patternString) {
     const parts = [];
-    const re = /:\w+/g;
+    const re = /:[A-Za-z_]+/g;
     let match;
     let lastPosition = 0;
     while ((match = re.exec(patternString)) != null) {

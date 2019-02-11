@@ -5,23 +5,14 @@ import Layout from 'src/components/layout';
 import SEO from 'src/components/seo';
 import SampleRequest from 'src/components/SampleRequest';
 
-export default function Sheet() {
+export default function KeyValue() {
   return (
     <Layout>
       <SEO
         title={`${apis.keyvalue.name} - The Simple API`}
         description={apis.keyvalue.description}
       />
-      <h1>
-        <span
-          style={{
-            display: 'inline-block',
-            verticalAlign: 'middle',
-          }}
-        >
-          Key Value
-        </span>
-      </h1>
+      <h1>${apis.keyvalue.name}</h1>
       <p>{apis.keyvalue.description}</p>
       <div>
         <h2>1. Set a value</h2>

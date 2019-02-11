@@ -8,6 +8,10 @@ const apis = {
     name: 'Key Value',
     description: 'A serverless key-value database backed by DynamoDB',
   },
+  log: {
+    name: 'Log',
+    description: 'A simple log database backed by Google Spreadsheet',
+  },
 };
 
 export default apis;
