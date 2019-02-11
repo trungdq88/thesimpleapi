@@ -143,7 +143,18 @@ export default function Sheet() {
         />
       </div>
       <div>
-        <h2>5. What can you do with this?</h2>
+        <h2>5. Behind the scenes</h2>
+        <ul>
+          <li>Google Cloud</li>
+          <li>Google Spreadsheet API</li>
+          <li>AWS Lambda</li>
+          <li>Cloudfront</li>
+          <li>Route 53</li>
+          <li>NodeJS</li>
+        </ul>
+      </div>
+      <div>
+        <h2>6. What can you do with this?</h2>
         <ul>
           <li>
             An effortless CMS to manage content of your website without any
@@ -176,7 +187,7 @@ export default function Sheet() {
         </small>
       </div>
       <div>
-        <h2>6. Licences</h2>
+        <h2>7. Licences</h2>
         Free for all of your hobby projects. Contact me if you need more.
       </div>
     </Layout>

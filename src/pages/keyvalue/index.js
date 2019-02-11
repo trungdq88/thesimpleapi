@@ -90,11 +90,25 @@ export default function Sheet() {
         />
       </div>
       <div>
-        <h2>4. Limitations</h2>
+        <h2>4. Behind the scenes</h2>
+        <ul>
+          <li>AWS DynamoDB</li>
+          <li>AWS Lambda</li>
+          <li>Cloudfront</li>
+          <li>Route 53</li>
+          <li>NodeJS</li>
+        </ul>
+      </div>
+      <div>
+        <h2>5. Limitations</h2>
         <ul>
           <li>
             Speed is not a feature, each request will likely to take about 300ms
             up to 3 seconds for the response to be returned.
+          </li>
+          <li>
+            Eventually Consistent Reads: when you "get", the response might not
+            reflect the results of a recently completed "set" operation.
           </li>
           <li>
             You have free 1000 requests for each <code>:secret</code>. Check{' '}
@@ -104,13 +118,14 @@ export default function Sheet() {
         </ul>
       </div>
       <div>
-        <h2>5 What can you do with this?</h2>
+        <h2>6. What can you do with this?</h2>
         <ul>
           <li>Probably to speedup your hackathon projects.</li>
+          <li>Portable free database for pet projects</li>
         </ul>
       </div>
       <div>
-        <h2>6. Licences</h2>
+        <h2>7. Licences</h2>
         Free for all of your hobby projects. Contact me if you need more.
       </div>
     </Layout>

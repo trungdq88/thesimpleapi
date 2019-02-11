@@ -6,7 +6,7 @@ const apis = {
   },
   keyvalue: {
     name: 'Key Value',
-    description: 'A serverless key-value database.',
+    description: 'A serverless key-value database backed by DynamoDB',
   },
 };
 
