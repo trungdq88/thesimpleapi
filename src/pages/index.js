@@ -10,7 +10,7 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <h1>Hello</h1>
     <p>
-      Here I build a set of small useful APIs so you can use in your project
+      I build a bunch of small APIs so you can use in your quick projects
       without suffering all the difficulties setting up stuff.
     </p>
     <p>All free for hobby projects. Contact me if you need more.</p>

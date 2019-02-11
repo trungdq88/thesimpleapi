@@ -2,7 +2,7 @@ const apis = {
   sheet: {
     name: 'Sheet',
     description:
-      'Turn your Google Spreadsheet into JSON with a simple API call.',
+      'Turn your Google Spreadsheet into JSON with a simple API call',
   },
   keyvalue: {
     name: 'Key Value',
