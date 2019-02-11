@@ -102,7 +102,7 @@ export default function Log() {
           actions={{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            urlPattern: 'http://localhost:3841/:sheetId/:page',
+            urlPattern: 'https://log.thesimpleapi.com/:sheetId/:page',
           }}
           defaultParams={{
             sheetId: '1AqR2hceLxpr7zMMQtoWaZmZcHEOIS_Uu2jBSrT3ZS6o',
