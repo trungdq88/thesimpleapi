@@ -19,19 +19,21 @@ const Section = styled.section`
   margin: 10px 0;
 `;
 
-export default function SampleRequest({ actions, defaultParams }) {
+export default function SampleRequest({ actions, defaultParams, defaultBody }) {
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState();
   const [params, setParams] = useState(defaultParams);
+  const [body, setBody] = useState(defaultBody);
 
   const item = parseActions(actions);
 
   async function send() {
     setLoading(true);
     try {
-      const response = await fetch(buildUrl(item.urlPattern, params)).then(r =>
-        r.json(),
-      );
+      const response = await fetch(buildUrl(item.urlPattern, params), {
+        method: item.method,
+        body: body,
+      }).then(r => r.json());
       setResponse(response);
     } catch (e) {
       console.error(e);
@@ -44,6 +46,8 @@ export default function SampleRequest({ actions, defaultParams }) {
   function parseActions(actions) {
     if (typeof actions === 'string') {
       return { method: 'get', urlPattern: actions };
+    } else if (typeof actions === 'object') {
+      return actions;
     }
     throw new Error('actions not supported');
   }
@@ -96,7 +100,7 @@ export default function SampleRequest({ actions, defaultParams }) {
   return (
     <>
       <Section>
-        <b>Request</b>: (you can replace with your own spreadsheetId)
+        <b>Request</b>: (you can replace with your own params)
         <br />
         <code>
           {item.method.toUpperCase()}{' '}
@@ -117,6 +121,18 @@ export default function SampleRequest({ actions, defaultParams }) {
             ),
           )}
         </code>
+        {item.method.toUpperCase() === 'POST' ? (
+          <>
+            <br />
+            Body:{' '}
+            <ReplaceableBox
+              value={body || ''}
+              onChange={e => setBody(e.target.value)}
+              placeholder="Body"
+            />
+            <br />
+          </>
+        ) : null}
         <button onClick={send}>Send</button>
         <br />
       </Section>

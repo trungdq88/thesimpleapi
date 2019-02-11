@@ -78,6 +78,9 @@ export default function Sheet() {
       <br />
       <div>
         <h2>1. Get the whole sheet as JSON</h2>
+        <p>
+          Use <code>/:sheetId</code> to fetch the whole sheet as JSON
+        </p>
         <SampleLink />
         <SampleRequest
           actions="https://sheet.thesimpleapi.com/:sheetId"
@@ -88,7 +91,10 @@ export default function Sheet() {
       </div>
       <div>
         <h2>2. Get a range in a sheet</h2>
-        <SampleLink />
+        <p>
+          Use the second param <code>/:sheetId/:range</code> to get a specific
+          range
+        </p>
         <SampleRequest
           actions="https://sheet.thesimpleapi.com/:sheetId/:range"
           defaultParams={{
@@ -99,7 +105,10 @@ export default function Sheet() {
       </div>
       <div>
         <h2>3. Multi sheets</h2>
-        <SampleLink />
+        <p>
+          <code>:range</code> can be used as reference to a sheet (just like in
+          Excel or Spreadsheet).
+        </p>
         <SampleRequest
           actions="https://sheet.thesimpleapi.com/:sheetId/:range"
           defaultParams={{

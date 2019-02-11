@@ -4,9 +4,9 @@ const apis = {
     description:
       'Turn your Google Spreadsheet into JSON with a simple API call.',
   },
-  notify: {
-    name: 'Notify',
-    description: 'Send you a notification via Email, Slack, SMS...',
+  keyvalue: {
+    name: 'Key Value',
+    description: 'A serverless key-value database.',
   },
 };
 
