@@ -9,6 +9,7 @@ import ImgBox from 'src/components/ImgBox.js';
 import Layout from 'src/components/layout';
 import SEO from 'src/components/seo';
 import SampleRequest from 'src/components/SampleRequest';
+import sheetDemo from './sheet-demo.webm';
 
 const trim = _ => `${_}`.trim();
 
@@ -62,20 +63,25 @@ export default function Sheet() {
         </span>
       </h1>
       <p>{apis.sheet.description}</p>
-      You can find your{' '}
-      <b>
-        {' '}
-        <code>sheetId</code>{' '}
-      </b>{' '}
-      here:
-      <ImgBox src={sheetIdLocation} alt="sheetId" />
-      <br />
+      <div>
+        <video width="100%" autoPlay loop muted>
+          <source src={sheetDemo} type="video/webm" />
+        </video>
+      </div>
       <br />
       <div>
         <h2>1. Get the whole sheet as JSON</h2>
         <p>
           Use <code>/:sheetId</code> to fetch the whole sheet as JSON
         </p>
+        You can find your{' '}
+        <b>
+          {' '}
+          <code>sheetId</code>{' '}
+        </b>{' '}
+        here:
+        <ImgBox src={sheetIdLocation} alt="sheetId" />
+        <br />
         <SampleLink />
         <SampleRequest
           actions="https://sheet.thesimpleapi.com/:sheetId"

@@ -16,13 +16,13 @@ const IndexPage = () => (
     <p>All free for hobby projects. Contact me if you need more.</p>
     <hr />
     {all.map(app => (
-      <>
+      <React.Fragment key={app.key}>
         <Link to={`/${app.key}`}>
           <h2>{app.name}</h2>
         </Link>
         <p>{app.description}</p>
         <hr />
-      </>
+      </React.Fragment>
     ))}
   </Layout>
 );

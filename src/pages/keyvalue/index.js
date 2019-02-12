@@ -1,5 +1,6 @@
 import React from 'react';
 import apis from 'src/data/metadata.js';
+import demo from './keyvalue-demo.webm';
 
 import Layout from 'src/components/layout';
 import SEO from 'src/components/seo';
@@ -14,6 +15,11 @@ export default function KeyValue() {
       />
       <h1>{apis.keyvalue.name}</h1>
       <p>{apis.keyvalue.description}</p>
+      <div>
+        <video width="100%" autoPlay loop muted>
+          <source src={demo} type="video/webm" />
+        </video>
+      </div>
       <div>
         <h2>1. Set a value</h2>
         Send a POST request to this endpoint with <code>text</code> body:

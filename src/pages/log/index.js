@@ -3,6 +3,7 @@ import apis from 'src/data/metadata.js';
 import uaParser from 'ua-parser-js';
 import { serviceAccountEmail } from 'src/data/googleApi.js';
 import writePermission from './write-permission.png';
+import demo from './log-demo.webm';
 import ImgBox from 'src/components/ImgBox.js';
 import Layout from 'src/components/layout';
 import SEO from 'src/components/seo';
@@ -28,6 +29,11 @@ export default function Log() {
       />
       <h1>{apis.log.name}</h1>
       <p>{apis.log.description}</p>
+      <div>
+        <video width="100%" autoPlay loop muted>
+          <source src={demo} type="video/webm" />
+        </video>
+      </div>
       <div>
         <h2>1. You need a database</h2>
         <p>
