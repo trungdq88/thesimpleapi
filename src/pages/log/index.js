@@ -141,7 +141,7 @@ export default function Log() {
         <ul>
           <li>Quickly collect and aggregate data.</li>
           <li>
-            For example, I logged browser information of all request to this
+            For example, I logged browser information of all requests to this
             page to{' '}
             <a
               target="_blank"

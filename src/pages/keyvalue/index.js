@@ -12,7 +12,7 @@ export default function KeyValue() {
         title={`${apis.keyvalue.name} - The Simple API`}
         description={apis.keyvalue.description}
       />
-      <h1>${apis.keyvalue.name}</h1>
+      <h1>{apis.keyvalue.name}</h1>
       <p>{apis.keyvalue.description}</p>
       <div>
         <h2>1. Set a value</h2>
