@@ -17,8 +17,8 @@ export default function Log() {
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(uaParser(navigator.userAgent).browser),
-      },
+        body: JSON.stringify(uaParser(navigator.userAgent).browser)
+      }
     );
   }, []);
   return (
@@ -61,15 +61,15 @@ export default function Log() {
           actions={{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            urlPattern: 'https://log.thesimpleapi.com/:sheetId',
+            urlPattern: 'https://log.thesimpleapi.com/:sheetId'
           }}
           defaultParams={{
-            sheetId: '1AqR2hceLxpr7zMMQtoWaZmZcHEOIS_Uu2jBSrT3ZS6o',
+            sheetId: '1AqR2hceLxpr7zMMQtoWaZmZcHEOIS_Uu2jBSrT3ZS6o'
           }}
           defaultBody={JSON.stringify({
             id: 1,
             action: 'register',
-            email: 'trungdq88@gmail.com',
+            email: 'example@example.com'
           })}
         />
         <p>
@@ -108,16 +108,16 @@ export default function Log() {
           actions={{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            urlPattern: 'https://log.thesimpleapi.com/:sheetId/:page',
+            urlPattern: 'https://log.thesimpleapi.com/:sheetId/:page'
           }}
           defaultParams={{
             sheetId: '1AqR2hceLxpr7zMMQtoWaZmZcHEOIS_Uu2jBSrT3ZS6o',
-            page: 'Users',
+            page: 'Users'
           }}
           defaultBody={JSON.stringify({
             id: 1,
             action: 'register',
-            email: 'trungdq88@gmail.com',
+            email: 'example@example.com'
           })}
         />
       </div>
