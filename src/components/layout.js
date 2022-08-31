@@ -37,8 +37,7 @@ const Layout = ({ children }) => (
           <br />
           <hr />
           <footer>
-            © {new Date().getFullYear()}, {data.site.siteMetadata.title} by{' '}
-            <a href="mailto:trungdq88@gmail.com">trungdq88@gmail.com</a>
+            © {new Date().getFullYear()}, {data.site.siteMetadata.title}
           </footer>
         </div>
       </>
